@@ -1,0 +1,53 @@
+{
+  "name": "smbear/paypal",
+  "description": "",
+  "keywords": [
+    "Laravel",
+    "paypal"
+  ],
+  "authors": [
+    {
+      "name": "smile",
+      "email": "ywjmylove@163.com",
+      "role": "Developer"
+    }
+  ],
+  "homepage": "https://github.com/fs-platform/laravel-paypal",
+  "type": "library",
+  "time": "2021-6-25",
+  "require": {
+    "php": "^7.3",
+    "illuminate/support":"^8.0",
+    "paypal/paypal-checkout-sdk": "^1.0.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0",
+    "orchestra/testbench": "^6.0",
+    "phpstan/phpstan": "^0.12"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Smbear\\Paypal\\": "src/"
+    },
+    "files": [
+      "helper/function.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Smbear\\Paypal\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Smbear\\Paypal\\Providers\\PaypalServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit -c ./phpunit.xml --colors=always",
+    "analysis": "vendor/bin/phpstan analyse"
+  }
+}
